@@ -1,6 +1,4 @@
 name: MyProject
-include:
-  - base_spec.yml
 options:
   bundleIdPrefix: com.myapp
 packages:
@@ -11,7 +9,7 @@ targets:
   MyApp:
     type: application
     platform: iOS
-    deploymentTarget: "10.0"
+    deploymentTarget: "17.0"
     sources: [MyApp]
     settings:
       configs:
@@ -20,13 +18,6 @@ targets:
         release:
           CUSTOM_BUILD_SETTING: my_release_value
     dependencies:
-      - target: MyFramework
-      - carthage: Alamofire
-      - framework: Vendor/MyFramework.framework
       - sdk: Contacts.framework
       - sdk: libc++.tbd
       - package: Yams
-  MyFramework:
-    type: framework
-    platform: iOS
-    sources: [MyFramework]
