@@ -1,0 +1,32 @@
+name: MyProject
+include:
+  - base_spec.yml
+options:
+  bundleIdPrefix: com.myapp
+packages:
+  Yams:
+    url: https://github.com/jpsim/Yams
+    from: 2.0.0
+targets:
+  MyApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [MyApp]
+    settings:
+      configs:
+        debug:
+          CUSTOM_BUILD_SETTING: my_debug_value
+        release:
+          CUSTOM_BUILD_SETTING: my_release_value
+    dependencies:
+      - target: MyFramework
+      - carthage: Alamofire
+      - framework: Vendor/MyFramework.framework
+      - sdk: Contacts.framework
+      - sdk: libc++.tbd
+      - package: Yams
+  MyFramework:
+    type: framework
+    platform: iOS
+    sources: [MyFramework]
