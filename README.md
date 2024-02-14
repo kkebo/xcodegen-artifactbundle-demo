@@ -4,16 +4,16 @@
 
 ## Getting Started
 
-To generate `MyApp.xcodeproj`, run the following command.
+To generate `MyProject.xcodeproj`, run the following command.
 
 ```shell
 swift package xcodegen generate
 ```
 
-And then, open `MyApp.xcodeproj` with Xcode.
+And then, open `MyProject.xcodeproj` with Xcode.
 
 ```shell
-xed MyAPp.xcodeproj
+xed MyProject.xcodeproj
 ```
 
 I tested the instructions above with Xcode 15.2 on macOS 14.3.1 arm64.
