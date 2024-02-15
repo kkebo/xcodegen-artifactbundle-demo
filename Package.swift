@@ -7,8 +7,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "XcodeGenBinary",
-            url: "https://github.com/yonaskolb/XcodeGen/releases/download/2.39.0/xcodegen.artifactbundle.zip",
-            checksum: "c6dd51cd872dc355e914f2895109fae6bc6439dec6a35025c036188e6c372e36"
+            url: "https://github.com/yonaskolb/XcodeGen/releases/download/2.39.1/xcodegen.artifactbundle.zip",
+            checksum: "44d49941f68fc27afc6c33a0d64eb4413fdd1fdff688584bd64db456b85ecf71"
         ),
         .plugin(
             name: "xcodegen",
